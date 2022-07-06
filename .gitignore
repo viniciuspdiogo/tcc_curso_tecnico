@@ -1,6 +1,5 @@
-imagens/banner/*
-imagens/galeria/*
-imagens/logotipo/*
-imagens/slide/*
-.vscode/*
-.vscode/
+/imagens/banner/*
+/imagens/galeria/*
+/imagens/logotipo/*
+/imagens/slide/*
+/.vscode/

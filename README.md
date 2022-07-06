@@ -3,11 +3,7 @@ Projeto Desenvolvido para o TCC do curso técnico de Informática para Internet,
 
 O projeto utiliza as seguintes tecnologias.
 
-PHP 5.6
-Javascript
-Jquery
-Css
-Mysql
+PHP 5.6 | Javascript | Jquery | Css | Mysql
 
 
 Estarei atualizando esse repositório como forma de estudos em PHPOO e modificando algumas features para aprendizado.
