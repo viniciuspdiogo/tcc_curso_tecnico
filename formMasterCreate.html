@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Usuário Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        /* CSS DA TELA DE CRIAÇÃO DE ADMIN*/
+        body{text-rendering: auto;}
+        .admin_create_body{
+            background-color: #252525;
+        }
+        .box_all{
+            display: flex;
+            justify-content: center;
+            font-family: 'Roboto',sans-serif;
+        }
+        .div_box{
+            margin-top: 20px;
+            padding: 2rem;
+            background: rgb(18, 18, 20);
+            border: 1px solid rgb(63, 63, 63);
+            border-radius: 4px;
+        }
+        .div_box form{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .div_box form input{
+           padding: 0px 6px;
+           height: 56px;
+           background: rgb(9, 9, 10);
+           border: 1px solid rgb(196, 196, 204);
+           border-radius: 4px;
+           font-size: 16px;
+           font-weight: 700;
+           color:rgb(196, 196, 204) ;
+        }
+        .submit{
+            border: 0px;
+            border-radius: 6px;
+            padding: 10px;
+            font-size: 14px;
+            background: rgb(1, 95, 67);
+            font-weight: 700;
+            font-family: 'Roboto';
+            cursor: pointer;
+            color: #FFF;
+        }
+        
+
+        .box_msg {
+            gap: 5px;
+            display: flex;
+            justify-content: center;
+            font-weight: 400;
+        }
+        #msg_ok{
+            color: rgb(0, 250, 0);
+        }
+        #msg_nok{
+            color: rgb(255, 0, 0);
+        }
+    </style>
+    
+</head>
+<body class="admin_create_body">
+    <div class="box_all">
+        <div class="div_box">
+            <span 
+                style="display:block;font-size: 1.5rem;font-weight:700;color: #FFF;margin-bottom: 15px;"
+            >
+                CRIAR USUÁRIO MASTER
+            </span>
+            <form action="paginas/masterCreate.php" method="post">
+                <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Nome"
+                    required
+                />
+                <input 
+                    type="text" 
+                    name="user" 
+                    placeholder="Usuário"
+                    required
+                />
+                <input 
+                    type="text" 
+                    name="email" 
+                    placeholder="Email"
+                    required
+                />
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Senha"
+                    required
+                />
+                <button class="submit" type="submit">CRIAR USUÁRIO</button>
+                <div class="box_msg">
+                    <span id="msg_ok"></span>
+                    <span id="msg_nok"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const nameParam = parseInt(urlParams.get('infoResult'));
+        console.log(nameParam);
+        switch (nameParam) {
+            case 200:
+                document.getElementById('msg_ok').innerText = "Usuário Cadastrado com Sucesso!";
+                break;
+
+            case 401:
+                document.getElementById('msg_nok').innerText = "Usuário e Email já cadastrados!";
+                break;
+
+            case 402:
+                document.getElementById('msg_nok').innerText = "Usuário já cadastrado!";
+                break;
+
+            case 403:
+                document.getElementById('msg_nok').innerText = "Email já cadastrado!";
+                break;
+
+            case 500:
+                document.getElementById('msg_nok').innerText = "Não foi possível cadastrar o Usuário!";
+                break;
+            
+            default:
+            break;
+        }
+    </script>
+</body>
+</html>

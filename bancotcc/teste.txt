@@ -1,0 +1,185 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.4
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: 10-Jun-2016 às 07:15
+-- Versão do servidor: 5.6.15-log
+-- PHP Version: 5.4.24
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `db_usuario`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `administrador_master`
+--
+
+CREATE TABLE IF NOT EXISTS `administrador_master` (
+  `id_master` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_master` varchar(20) COLLATE utf8_bin NOT NULL,
+  `login_master` varchar(20) COLLATE utf8_bin NOT NULL,
+  `senha_master` varchar(20) COLLATE utf8_bin NOT NULL,
+  `email_master` varchar(80) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id_master`),
+  UNIQUE KEY `nome_master` (`nome_master`,`login_master`,`senha_master`,`email_master`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=7 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `agendamentos`
+--
+
+CREATE TABLE IF NOT EXISTS `agendamentos` (
+  `idagenda` int(11) NOT NULL AUTO_INCREMENT,
+  `horario` char(12) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idagenda`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=326 ;
+
+--
+-- Extraindo dados da tabela `agendamentos`
+--
+
+INSERT INTO `agendamentos` (`idagenda`, `horario`) VALUES
+(315, '240620160300'),
+(306, '030620161200'),
+(316, '300620160300'),
+(305, '030620161300'),
+(317, '300620160500'),
+(313, '300620161100'),
+(321, '300620160400'),
+(308, '030620162000'),
+(323, '300620162200'),
+(314, '030620162200'),
+(318, '300620161400'),
+(312, '040620160000'),
+(324, '300620162100'),
+(310, '030620161900'),
+(311, '030620160800'),
+(322, '300620161000'),
+(307, '030620161400'),
+(325, '300620161800'),
+(319, '300620160200'),
+(320, '300620161300');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cor`
+--
+
+CREATE TABLE IF NOT EXISTS `cor` (
+  `idcor` int(11) NOT NULL AUTO_INCREMENT,
+  `cor` varchar(7) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idcor`),
+  UNIQUE KEY `cor` (`cor`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `cor`
+--
+
+INSERT INTO `cor` (`idcor`, `cor`) VALUES
+(1, '#004080');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `horarios`
+--
+
+CREATE TABLE IF NOT EXISTS `horarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `horarios` varchar(5) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=28 ;
+
+--
+-- Extraindo dados da tabela `horarios`
+--
+
+INSERT INTO `horarios` (`id`, `horarios`) VALUES
+(4, '02:00'),
+(5, '00:00'),
+(6, '01:00'),
+(7, '03:00'),
+(8, '04:00'),
+(9, '05:00'),
+(10, '06:00'),
+(11, '07:00'),
+(12, '08:00'),
+(13, '09:00'),
+(14, '10:00'),
+(15, '11:00'),
+(16, '12:00'),
+(17, '13:00'),
+(18, '14:00'),
+(19, '15:00'),
+(20, '16:00'),
+(21, '17:00'),
+(22, '18:00'),
+(23, '19:00'),
+(24, '20:00'),
+(25, '21:00'),
+(26, '22:00'),
+(27, '23:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_cad`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_cad` (
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(50) COLLATE utf8_bin NOT NULL,
+  `senha` varchar(30) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=49 ;
+
+--
+-- Extraindo dados da tabela `tb_cad`
+--
+
+INSERT INTO `tb_cad` (`id_usuario`, `usuario`, `senha`) VALUES
+(47, 'Drudruzinho', '12345'),
+(48, '487894', '7894897848945');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `idusuario` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(20) COLLATE utf8_bin NOT NULL,
+  `nome` varchar(30) COLLATE utf8_bin NOT NULL,
+  `senha` varchar(20) COLLATE utf8_bin NOT NULL,
+  `email` varchar(100) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idusuario`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=5 ;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`idusuario`, `login`, `nome`, `senha`, `email`) VALUES
+(1, 'drudruzinho', 'Vinicius Pereira', '1234', 'viniciusp.diogo@hotmail.com'),
+(4, 'lucas', 'Lucas Maragaia', '12345', 'lucasmaragaia@hotmail.com');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

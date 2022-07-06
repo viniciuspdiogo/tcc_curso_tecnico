@@ -1,0 +1,251 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.4
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: 22-Jun-2016 ‡s 22:50
+-- Vers„o do servidor: 5.6.15-log
+-- PHP Version: 5.4.24
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+create Database barbearia22;
+use barbearia22;
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `agendamentos`
+--
+
+CREATE TABLE IF NOT EXISTS `agendamentos` (
+  `idagd` int(11) NOT NULL AUTO_INCREMENT,
+  `codagd` varchar(12) COLLATE utf8_bin DEFAULT NULL,
+  `idusr` int(11) DEFAULT NULL,
+  `idmst` int(11) DEFAULT NULL,
+  `dia` varchar(15) COLLATE utf8_bin DEFAULT NULL,
+  `hora` varchar(5) COLLATE utf8_bin DEFAULT NULL,
+  `diapedido` varchar(5) COLLATE utf8_bin DEFAULT NULL,	
+  PRIMARY KEY (`idagd`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=738 ;
+
+--
+-- Extraindo dados da tabela `agendamentos`
+--
+
+INSERT INTO `agendamentos` (`idagd`, `codagd`, `idusr`, `idmst`, `dia`, `hora`) VALUES
+(731, '280620160200', NULL, 1, NULL, NULL),
+(737, '230620161700', 27, 4, '23/06/2016', '17:00'),
+(730, '280620160100', NULL, 1, NULL, NULL),
+(728, '280620162300', NULL, 1, NULL, NULL),
+(727, '280620162200', NULL, 1, NULL, NULL),
+(725, '280620162000', NULL, 1, NULL, NULL),
+(726, '280620162100', NULL, 1, NULL, NULL),
+(703, '240620161200', 24, 1, '24/06/2016', '12:00'),
+(736, '230620161400', 27, NULL, '23/06/2016', '14:00'),
+(705, '280620160000', NULL, 1, NULL, NULL),
+(729, '280620161300', 25, 4, '28/06/2016', '13:00'),
+(708, '280620160300', NULL, 1, NULL, NULL),
+(709, '280620160400', NULL, 1, NULL, NULL),
+(710, '280620160500', NULL, 1, NULL, NULL),
+(711, '280620160600', NULL, 1, NULL, NULL),
+(712, '280620160700', NULL, 1, NULL, NULL),
+(713, '280620160800', NULL, 1, NULL, NULL),
+(714, '280620160900', NULL, 1, NULL, NULL),
+(715, '280620161000', NULL, 1, NULL, NULL),
+(716, '280620161100', NULL, 1, NULL, NULL),
+(717, '280620161200', NULL, 1, NULL, NULL),
+(718, '280620161300', NULL, 4, NULL, NULL),
+(719, '280620161400', NULL, 1, NULL, NULL),
+(720, '280620161500', NULL, 1, NULL, NULL),
+(721, '280620161600', NULL, 1, NULL, NULL),
+(722, '280620161700', NULL, 1, NULL, NULL),
+(723, '280620161800', NULL, 1, NULL, NULL),
+(724, '280620161900', NULL, 1, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `horarios`
+--
+
+CREATE TABLE IF NOT EXISTS `horarios` (
+  `idhorario` int(11) NOT NULL AUTO_INCREMENT,
+  `codhorarios` varchar(5) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idhorario`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=26 ;
+
+--
+-- Extraindo dados da tabela `horarios`
+--
+
+INSERT INTO `horarios` (`idhorario`, `codhorarios`) VALUES
+(1, '00:00'),
+(2, '01:00'),
+(3, '02:00'),
+(4, '03:00'),
+(5, '04:00'),
+(6, '05:00'),
+(7, '06:00'),
+(8, '08:00'),
+(9, '09:00'),
+(10, '10:00'),
+(11, '11:00'),
+(12, '12:00'),
+(13, '13:00'),
+(14, '14:00'),
+(15, '15:00'),
+(16, '07:00'),
+(17, '16:00'),
+(18, '17:00'),
+(19, '18:00'),
+(20, '19:00'),
+(21, '20:00'),
+(22, '21:00'),
+(23, '22:00'),
+(24, '23:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `imagens`
+--
+
+CREATE TABLE IF NOT EXISTS `imagens` (
+  `idimg` int(11) NOT NULL AUTO_INCREMENT,
+  `bannerimg` varchar(50) COLLATE utf8_bin NOT NULL,
+  `slideimg` varchar(50) COLLATE utf8_bin NOT NULL,
+  `lateralimg` varchar(50) COLLATE utf8_bin NOT NULL,
+  `glrimg` varchar(50) COLLATE utf8_bin NOT NULL,
+  `logoimg` varchar(50) COLLATE utf8_bin NOT NULL,
+  `ativo` bit(1) COLLATE utf8_bin NOT NULL,	
+  PRIMARY KEY (`idimg`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `infogerais`
+--
+
+CREATE TABLE IF NOT EXISTS `infogerais` (
+  `idinfo` int(11) NOT NULL,
+  `whatsinfo` varchar(15) COLLATE utf8_bin NOT NULL,
+  `faceinfo` text COLLATE utf8_bin NOT NULL,
+  `instainfo` text COLLATE utf8_bin NOT NULL,
+  `endinfo` varchar(60) COLLATE utf8_bin NOT NULL,
+  `bairroinfo` varchar(40) COLLATE utf8_bin NOT NULL
+  `linkgoogle` text COLLATE utf8_bin NOT NULL,
+  `cep` varchar(15) COLLATE utf8_bin NOT NULL,
+  `cidade` varchar(50) COLLATE utf8_bin NOT NULL,
+  
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Extraindo dados da tabela `infogerais`
+--
+
+INSERT INTO `infogerais` (`idinfo`, `whatsinfo`, `faceinfo`, `instainfo`, `endinfo`, `bairroinfo`) VALUES
+(0, '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `masters`
+--
+
+CREATE TABLE IF NOT EXISTS `masters` (
+  `idmst` int(11) NOT NULL AUTO_INCREMENT,
+  `nomemst` varchar(30) COLLATE utf8_bin NOT NULL,
+  `loginmst` varchar(20) COLLATE utf8_bin NOT NULL,
+  `senhamst` varchar(20) COLLATE utf8_bin NOT NULL,
+  `emailmst` varchar(100) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idmst`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `masters`
+--
+
+INSERT INTO `masters` (`idmst`, `nomemst`, `loginmst`, `senhamst`, `emailmst`) VALUES
+(1, 'Vinicius Pereira', 'drudruzinho', '12345', 'viniciusp.diogo@hotmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `produtos`
+--
+
+CREATE TABLE IF NOT EXISTS `produtos` (
+  `idprod` int(11) NOT NULL AUTO_INCREMENT,
+  `descprod` varchar(30) COLLATE utf8_bin NOT NULL,
+  `valorprod` varchar(10) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`idprod`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=123 ;
+
+--
+-- Extraindo dados da tabela `produtos`
+--
+
+INSERT INTO `produtos` (`idprod`, `descprod`, `valorprod`) VALUES
+(122, 'barba', '25,50'),
+(119, 'hidrata√ß√£o lanza (importada)', '25.00');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `sobre`
+--
+
+CREATE TABLE IF NOT EXISTS `sobre` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tituloSobre` varchar(30) COLLATE utf8_bin NOT NULL,
+  `textoSobre` text COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `sobre`
+--
+
+INSERT INTO `sobre` (`id`, `tituloSobre`, `textoSobre`) VALUES
+(1, 'testando', 'drudruzinho');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `idusr` int(11) NOT NULL AUTO_INCREMENT,
+  `nomeusr` varchar(30) COLLATE utf8_bin NOT NULL,
+  `loginusr` varchar(20) COLLATE utf8_bin NOT NULL,
+  `senhausr` varchar(16) COLLATE utf8_bin NOT NULL,
+  `emailusr` varchar(100) COLLATE utf8_bin NOT NULL,
+  `numerousr` varchar(100) COLLATE utf8_bin NOT NULL,
+  `liberausr` bit(1) NOT NULL,
+  PRIMARY KEY (`idusr`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=28 ;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`idusr`, `nomeusr`, `loginusr`, `senhausr`, `emailusr`, `numerousr`, `liberausr`) VALUES
+(1, 'adalberto', 'betinho123', 'tricolor', 'viniciusp.diogo@hotmail.com', '(12) 34567-8958', b'0'),
+(27, 'Bruna Moura', 'brunamoura', 'bruninhapeppapig', 'bru.moura01@gmail.com', '(11) 96707-1385', b'1'),
+(26, 'Rubens RIbeiro', 'rubinhoformula1', 'testando', 'rubensziks13@gmail.com', '(11) 96923-8716', b'1'),
+(25, 'vinicius', 'tricolorsoberano', 'tricolor12345678', 'viniciusp.diogo@outlook.com', '(11) 96923-8719', b'1'),
+(24, 'Vinicius Pereira', 'viniciusp_diogo', 'tricolorsoberano', 'viniciusp.diogo@gmail.com', '(12) 34567-8957', b'0');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

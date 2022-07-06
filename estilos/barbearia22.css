@@ -1,0 +1,2308 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family:arial,sans-serif;
+	cursor:default;
+	background:#2d2d2d;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: #666;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+div#troca{
+	position:absolute;
+	top:0px;
+	left:-0.1%;
+	width:7%;
+	height:4%;
+	z-index:9999999;
+	background:#1d1d1d;
+	border:0px;
+	border-bottom-right-radius:10px;
+}
+div#troca a#sol{
+	width:50%;
+	height:100%;
+	float:left;
+	margin:auto;
+	background:url('../imagens/sol-inativo.png') no-repeat;
+	background-size:50%;
+	background-position:center;
+}
+div#troca a#lua{
+	height:100%;
+	width:50%;
+	float:right;
+	margin:auto ;
+	background:url('../imagens/lua-ativa.png') no-repeat;
+	background-size:60%;
+	background-position:center;
+}
+
+
+/* divisôes *//
+section#inicio{
+	margin:0px;
+	padding:0px;
+	height:35%;
+}
+
+div#slideshow-container {
+	width:100%;
+	height:65%;
+	position:absolute;
+	margin:0;
+	top:35%;
+	overflow:hidden;
+}
+section#cortes{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:100%;
+	background:#dedede;
+}
+section#galeria{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:200%;
+	background:rgba(29,29,29,0.4);
+}
+section#agenda{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:300%;
+	background: url("../imagens/fundoportal.jpg") fixed no-repeat;
+	background-size:100% 100%;
+}
+section#sobre{
+	position:absolute;
+	width:100%;
+	height:55%;
+	top:400%;
+	background:#2d2d2d;
+	left:0%;
+}
+
+/* RODAPÉ */
+footer#rodape{
+	position:absolute;
+	top:454.5%;
+	width:100%;
+	height:45%;
+	margin-top:0px;
+	padding:0px;
+	background:#1C1C1C;
+}
+
+
+/* Imagem de titulo */
+.caixabanner {
+	width: 100%;
+	height:29%;
+	margin: 0px;
+	position:relative;
+	text-align:center;
+	background:#4d4d4d;
+}
+.caixabanner #banner{
+	height:100%;
+	width:100%;
+	position:relative;
+	margin:0 auto;
+	
+}
+/* menu */
+
+#menu {
+	position: absolute;
+	width: 100%;
+	height: 6%;
+	transition:all ease 0.3s;	
+	text-align:center;
+	background:#2d2d2d;
+}
+#menu ul {
+	width:100%;
+	height:100%;
+	margin:0px auto;
+	padding:0px;
+	list-style: none;
+	display:block;
+}
+#menu ul li {
+	display:inline-block;
+	padding:0px;
+	margin:0px;
+	
+}
+
+ button {
+	margin:0px -2px;
+	width:10em;
+	height:100%;
+	text-decoration: none;
+	cursor:pointer;
+	font-size:11pt;
+	font-family:arial,sans-serif;
+	color: #fff;
+	background:none;
+	border:0px;
+	font-weight:bold;
+	transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+	text-transform:uppercase;
+	outline:0;
+}
+ button:hover{
+	background:#A5A5A5;
+	color:#ffffff;
+	transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+	width:11em;
+}
+	
+	
+.local,.menu-fixo .local{
+	background:#fff;
+	color:#3d3d3d;
+}
+
+.topo{
+	background:#ffffff;
+	color:#3d3d3d;
+}
+.menu-fixo {
+		position:fixed !important;
+		top: 0;
+		z-index: 96;
+		transition:all ease 0.3s;
+		-webkit-transition:all ease 0.3s;
+		-moz-transition:all ease 0.3s;
+		box-shadow:3px 5px 5px rgba(0,0,0,0.5);
+		height:8%;
+		display:block;
+}
+.menu-fixo button{
+	transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+	font-weight:bold;
+	font-family:arial,sans-serif;
+	}
+	
+	
+/* Voltar ao Topo */
+#toTop {
+	right: 5px; 
+	bottom:1%;
+	cursor: pointer; 
+	display: none; 
+	position: fixed; 
+	z-index:9;
+	opacity:0.8;
+	transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+	width:4%;
+	height:5%;
+	background:url('../imagens/setatopo.png') no-repeat;
+	background-size:70%;
+	background-position:center;
+}
+#toTop:hover{opacity:1;transition:all ease 0.3s;-moz-transition:all ease 0.3s;-webkit-transition:all ease 0.3s;}
+
+/*------------Cortes e Valores-----------*/
+
+#tabela-cortes{
+	position:relative;
+	margin: auto;
+	width:100%;
+	height:100%;
+	float:left;
+	
+}
+table#cortes-valores{
+	position:absolute;
+	width:70%;
+	top:8%;
+	left:0px;
+	right:0px;
+	margin:auto;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+}
+#cortes-valores tr:hover .esquerda{
+	background:rgba(0,0,0,0.1);
+
+}
+
+#cortes-valores tr:hover .direita{
+	background:rgba(0,0,0,0.2);
+	
+}
+#cortes-valores .esquerda,.direita{
+	border-bottom: 1px solid #fff	
+
+}
+
+table#cortes-valores caption{
+
+	margin-bottom:20px;
+	font-size:15pt;
+	font-weight:bold;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	
+
+}
+table#cortes-valores .esquerda{
+	font:bold 13pt Roboto,arial,sans-serif;
+	text-transform:uppercase;
+	text-align:left;
+	color:#000;
+	text-indent:15px;
+	letter-spacing:1px;
+	padding:5px;
+}
+table#cortes-valores .direita{
+	font-size:bold 14pt Roboto,arial,sans-serif;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	text-indent:15px;
+	color:#000;
+	padding:5px;
+	text-align:left;
+}
+
+/*------------------Sobre------------------*/
+.sobre{
+	position:absolute;
+	top:5%;
+	left:2.5%;
+	margin:auto;
+	width:67%;
+	height:90%;
+	border-bottom:1px solid rgba(255,255,255,.5);
+	
+}
+.img-sobre{
+	position:absolute;
+	width:28%;
+	height:90%;
+	right:2.5%;
+	top:5%;
+	margin:auto;
+	border-bottom:1px solid rgba(255,255,255,.5);
+	padding:10px;
+}
+h1.titulo-sobre{
+	margin:5% auto 2% auto;
+	width:100%;
+	text-align:center;
+	font-size:15pt;
+	color:#fff;
+	letter-spacing:2px;
+	text-transform:uppercase;
+	font-weight:bold;
+	border-bottom:2px solid #737373;
+}
+p.texto-sobre{
+	margin:3% auto;
+	width:100%;
+	text-align:justify;
+	font:bold 13pt Roboto,arial,sans-serif;
+	line-height:1.4em;
+	color:#ffffff;
+	letter-spacing:1px;
+	text-indent:50px;
+	padding:5px;
+}
+img.sobre-imagem{
+	position:absolute;
+	left:0px;
+	right:0px;
+	bottom:8%;
+	height:70%;
+	margin:auto;
+}
+ 
+	
+	
+/*---------- Login - Cadastro -----------*/
+#cadastrar{
+	display:none;
+}
+.menu-fixo .flip{
+	background:url('../imagens/login-branco.png')no-repeat;
+	position:absolute;
+	background-size:50%;
+	background-position:center;
+	width:4%;
+	height:100%;
+	top:0%;
+	right:2%;
+	margin:auto;
+	cursor:pointer;
+	border-radius:5px;
+	transition:all ease 0.3s;
+}
+.flip {
+	position:absolute;
+	background:url('../imagens/login-branco.png')no-repeat;
+	background-size:40%;
+	background-position:center;
+	width:4%;
+	height:100%;
+	top:0%;
+	right:2%;
+	margin:auto;
+	cursor:pointer;
+	transition:all ease 0.3s;
+}
+.caixa-login{
+	position:fixed;
+	width:100%;
+	height:100%;
+	bottom:0px;
+	left:0px;
+	margin:auto;
+	padding:0px;
+	background:rgba(0,0,0,0.5);
+	z-index:97;
+	display: none;
+}
+.fecha-login{
+	position:absolute;
+	height:8%;
+	top:1.5%;
+	right:1%;
+	z-index:98;
+	cursor:pointer;
+}
+div#tabelas{
+	position:fixed;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	margin:auto;
+	width:60%;
+	height:60%;
+	height:justify;
+	background: rgba(0,0,0,.9);
+	border:2px solid #ff9900;
+	z-index:99;
+	padding:20px;
+	display:none;
+	border-radius:5px;
+}
+.tabela{
+	position:relative;
+	width:50%;
+	margin:2% 0px;
+	float:left;
+	text-align:center;
+	font-weight:bold;
+}
+.tabela-registro{
+	position:relative;
+	width:50%;
+	margin:2% 0px;
+	float:right;
+	text-align:center;
+	font-weight:bold;
+}
+.tabela caption, .tabela-registro caption{
+	text-align:center;
+	margin:auto 2.5%;
+	text-transform:uppercase;
+	font-size:13pt;
+	letter-spacing:2px;
+	color:#ff9900;
+}
+.texto::-webkit-input-placeholder {
+	color:#fff;
+	font:bold 13pt Roboto,arial,sans-serif;
+}
+
+.texto::-moz-input-placeholder {
+	color:#fff;
+	font:bold 13pt Roboto,arial,sans-serif;
+}
+
+.texto:-ms-input-placeholder {  
+	color:#fff;
+	font:bold 13pt Roboto,arial,sans-serif;
+}
+
+.tabela .texto,.tabela-registro .texto{
+ 
+	text-indent:10px;
+	text-align: center;
+	height:35px;
+	width:100%;
+	background:none;
+	color:#fff;
+	font:bold 13pt Roboto,arial,sans-serif;
+	margin:2px auto ;
+	border:0px;
+	border-bottom: 1px solid #ff9900;
+	
+}
+.tabela-registro th{
+	width:90%;
+}
+.tabela-registro .th-detalhe{
+	width:10%;
+	height:35px;
+}
+
+/*------------------AVISOS CADASTRO----------*/ 
+.tabela-registro .aviso{
+	position:relative;
+	max-width:100%;
+	border:0px;
+	display:none;
+	float:right;
+}
+.tabela-registro .tipo-erro{
+	position:absolute;
+	left:100%;
+	vertical-align:middle;
+	float:right;
+	width:55%;
+	background:#f00;
+	color:#fff;
+	font:bold 10pt Roboto,arial,sans-serif;
+	border-radius:5px;
+}
+
+.tabela-registro .detalhe{
+	right:-8%;
+	width:8%;
+	top:0px;
+	height:5%;
+	background:#fff;
+	border:0px;
+}
+.tabela input.bot,.tabela-registro input.bot{
+	color:#fff;
+	background:none;
+	transition:all ease 0.5s;
+	border:1px solid #ff9900;
+	letter-spacing:2px;
+	font:bold 13pt Roboto,arial,sans-serif;
+}
+.tabela input.bot:hover,.tabela-registro input.bot:hover{
+	background:#ff9900;
+	color:#000;
+	cursor:pointer;
+	transition:all ease 0.5s;
+}
+.tabela a.senha {
+	padding: 0px;
+	color:#fff;
+	font-size:10pt;
+	text-decoration:underline;
+	letter-spacing:2px;
+}
+.tabela a.senha:hover{
+	background:none;
+}
+.info-login{
+	text-align:left;
+	font:8pt Roboto,arial,sans-serif;
+	color:#fff;
+}
+/*--------------- AVISOS LOGIN-----------*/
+
+#errolog span{
+	position:relative;
+	color:#fff;
+	font:bold 12pt Roboto,arial,sans-serif;	
+	background:#f00;
+	padding:5px;
+	margin-left:2%;
+	border-radius:5px;
+}
+#errolog img,#ok img{
+	vertical-align:middle;
+	
+}
+#ok span{
+	position:relative;
+	color:#fff;
+	font:bold 12pt Roboto,arial,sans-serif;	
+	padding:5px;
+	margin-left:2%;
+	border-radius:5px;
+}
+
+/*------------Área do Usuário-------------*/
+#tabelas-logado{
+	position:relative;
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+#tabelas-logado .tabela-usuario{
+	width:100%;	
+}
+.tabela-usuario .usu-logo img{
+	position:relative;
+	margin-top:5%;
+	height:30%;
+	width:30%;
+}
+.tabela-usuario .usu-nome{
+	font:bold 15pt Roboto,arial,sans-serif;
+	color:#fff;
+}
+.tabela-usuario .usu-libera{
+	font:100 10pt Roboto,arial,sans-serif;
+	color:#fff;
+}
+
+
+
+
+/*--------------- Redes Sociais -------------------*/
+.redes-sociais{
+width:33.33%;
+height:85%;
+top:0px;
+left:0px;
+float:left;
+}
+.tabela-info{
+width:100%;
+text-align:left;
+text-indent:5%;
+color:#a6a6a6;
+font-family:Roboto,sans-serif;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+.tabela-info .fotos-redes{
+	width:100%;
+	font-size:10pt;
+	padding-top:20px;
+}
+.tabela-info img{
+	height:30px;
+	vertical-align: middle;
+	padding-right:5px;
+}
+.tabela-info .endereco{
+	padding-top:20px;
+	height:20px;
+	font-size:11pt;
+}
+.tabela-info .endereco2{
+	height:20px;
+	font-size:10pt;
+}
+.design{
+	left:0%;
+	margin:auto;
+	position:absolute;
+	height:100%;
+	width:15%;
+}
+.design span{
+	vertical-align:middle;
+	list-style:none;
+	font:bold 8pt Roboto,sans-serif;
+	color:#a6a6a6;
+	letter-spacing:2px;
+	text-transform:uppercase;
+	text-decoration:none;
+	cursor:pointer;
+}
+.design span:hover{
+	color:#ccc;
+}
+ .caixa{
+	position:fixed;
+	width:100%;
+	height:100%;
+	bottom:0px;
+	left:0px;
+	margin:auto;
+	padding:0px;
+	background:rgba(0,0,0,.8);
+	z-index:96;
+	display: none;
+}
+.popup{
+     position: fixed;
+     top: 0; bottom: 0;
+     left: 0; right: 0;
+     margin: auto;
+     width: 60%;
+     height: 90%;
+     padding: 20px;
+     border: solid 1px #ff0000;
+     background:#ffffff;
+	 z-index:97;
+  }
+.areas{
+width:95%;
+height:90%;
+margin:5% auto;
+}
+.empresa{
+	position:absolute;
+	width:100%;
+	height:15%;
+	bottom:0px;
+}
+.nome-empresa{
+	width:100%;
+	height:100%;
+	color:#a6a6a6;
+	font-size:10pt;
+	letter-spacing:2px;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-family:Roboto,sans-serif;
+}
+#gmap_canvas
+{
+	height:100%;
+	width:100%;
+    border: 1px solid #ccc;
+}
+a.mapa{
+color:#2d2d2d;
+text-decoration:none;
+font:bold 11pt Roboto,arial,sans-serif;
+}
+a.mapa:hover{
+	text-decoration:underline;
+}
+
+/*--------------- Slide de Apresentação ----------------*/
+
+.slider{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	margin:0 auto;
+}
+.slider-item{
+	min-width:100%;
+	min-height:100%;
+	position:absolute;
+}
+
+#prev,#next{
+	position: absolute; 
+	top:0px;bottom:0px;
+	margin:auto;
+	height:60px;
+	width:60px;
+	z-index:9;
+	cursor: pointer;
+	padding:5px;
+	background:rgba(0,0,0,.8);
+	border-radius:100%;
+	transition:all ease .3s .4s;
+	-webkit-transition:all ease .3s .4s;
+	-ms-transition:all ease .3s .4s;
+}
+#prev{
+	left:-60px;
+}#next{
+	right:-60px;
+}
+#prev img,#next img{
+	width:100%;
+	height:100%;
+	opacity:.5;
+	transition:all ease .3s;
+	-webkit-transition:all ease .3s;
+	-ms-transition:all ease .3s;
+}
+#prev img:hover,#next img:hover{
+	opacity:1;
+	transition:all ease .3s;
+	-webkit-transition:all ease .3s;
+	-ms-transition:all ease .3s;
+	-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+}
+#slideshow-container:hover #prev{
+	left:5%;
+	transition:all ease .3s .4s;
+	-webkit-transition:all ease .3s .4s;
+	-ms-transition:all ease .3s .4s;
+}
+#slideshow-container:hover #next{
+	right:5%;
+	transition:all ease .3s .4s;
+	-webkit-transition:all ease .3s .4s;
+	-ms-transition:all ease .3s .4s;
+}
+/*------------- Galeria de Fotos -----------------*/
+#container-galeria{
+	margin:5% auto auto auto;
+	width:90%;
+	height:75%;
+	position: relative;
+}
+#container2{
+	width:90%;
+	height:15%;	
+	margin:auto;
+	background:#000;
+	position:relative;
+	overflow:hidden;
+}
+
+.fotos{	
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	position: relative; 
+}
+.item{	
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background: #1d1d1d;
+	margin:0 auto;
+	position: relative; 
+}
+.item img{
+	position: absolute;  
+	max-width:80%;
+	max-height:90%;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;	
+}
+
+span.prev-galeria{
+	cursor: pointer; 
+	position: absolute; 
+	z-index: 95;
+	top:0px;
+	left:0px;
+	background:url('../imagens/seta-esquerda.png') no-repeat;
+	background-size:5% 8%;
+	background-position:5% 50%;
+	opacity:0;
+	transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+	width:50%;
+	height:100%;
+	
+}
+span.next-galeria{
+	cursor: pointer; 
+	position: absolute; 
+	z-index: 95;
+	right:0px;
+	background:url('../imagens/seta-direita.png') no-repeat;
+	background-size:5% 8%;
+	background-position:95% 50%;
+	opacity:0;
+	transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+	width:50%;
+	height:100%;
+	top:0px;
+	
+}
+span#ant,span#prox{
+	position:absolute;
+	height:100%;
+	width:5%;
+	top:0px;
+	margin:auto;
+	cursor:pointer;
+	transition:ease all 0.3s;
+	-webkit-transition:ease all 0.3s;
+	-moz-transition:ease all 0.3s;
+}
+span#ant{
+	left:0px;
+	margin:auto;
+	background:url('../imagens/seta-esquerda.png') no-repeat;
+	background-size:40%;
+	background-position:50% 50%;
+	background-color:rgba(0,0,0,0.4);
+	
+}
+
+span#prox{
+	right:0px;
+	margin:auto;
+	background-color:rgba(0,0,0,0.5);
+	background:url('../imagens/seta-direita.png') no-repeat;
+	background-size:40%;
+	background-position:50% 50%;
+	background-color:rgba(0,0,0,0.4);
+}
+
+
+#miniaturas{	
+	position:relative;
+	height:100%;
+	margin:auto;
+	padding:5px 0px;
+}
+.item-foto{
+	position:relative;
+	float:left;
+	height:100%;
+	width:120px;
+	margin:auto 10px;
+	overflow:hidden;
+	text-align:center;
+	cursor:pointer;
+	background:#000;
+	border:1px solid #3d3d3d;
+}
+.item-foto{
+	opacity:0.5;
+}
+.item-foto:hover ,#miniaturas .activeSlide {
+	opacity:1;
+}
+
+#container-galeria:hover span {
+	opacity:0.4;
+	transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+}
+ #container-galeria span:hover{
+	opacity:1;
+	transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+}
+span#prox:hover,span#ant:hover{
+	transition:ease all 0.3s;
+	background-color:rgba(0,0,0,0.8);
+}
+
+/*------------------ Agendamentos -------------*/
+div#agendamentos{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+.tabela-agenda{
+	position:relative;
+	width:47%;
+	height:70%;
+	text-align:center;
+	margin:8% 1.5%;
+	float:left;
+	background:rgba(0,0,0,.8);
+	box-shadow:3px 5px 5px rgba(0,0,0,0.5);
+}
+.horarios-disponiveis{
+	position:relative;
+	width:47%;
+	height:70%;
+	text-align:center;
+	margin:8% 1.5%;
+	float:right;
+	background:rgba(0,0,0,.8);
+	box-shadow:3px 5px 5px rgba(0,0,0,0.5);
+}
+.tabela-agenda > div{
+	margin:1% auto;
+	font-size:15pt;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#fff;
+	letter-spacing:2px;
+	text-align:center;
+}
+.horarios-disponiveis .span-horario{
+	width:100%;
+	height:9%;
+	margin:1% auto;
+	font-size:15pt;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#fff;
+	letter-spacing:2px;
+	text-align:center;
+}
+.horarios-disponiveis .lista-horario{
+	position:absolute;
+	width:100%;
+	height:80%;
+}
+.horarios-disponiveis .bot-verifica{
+	position:absolute;
+	text-align:left;
+	bottom:0px;
+	width:50%;
+	height:10%;
+	margin:1% auto auto 0;
+	
+}
+.horarios-disponiveis .bot-agenda{
+	position:absolute;
+	text-align:center;
+	bottom:0px;
+	right:0px;
+	width:50%;
+	height:10%;
+	margin:auto;
+	color:#ffffff;
+	font:bold 10pt Roboto,arial,sans-serif;
+	text-transform:uppercase;
+	padding:5px;
+}
+.horarios-disponiveis .testa{
+	height:90%;
+	width:50%;
+	border:0px;
+	color:#595959;
+	margin:auto 10%;
+	font: bold 15pt arial,sans-serif;
+	background:#ffffff;
+	text-transform:uppercase;
+	text-align:center;
+	cursor:pointer;
+	transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+	border-radius:3px;
+}
+.horarios-disponiveis .testa:hover{
+	color:#ffffff;
+	background:none;
+	border:1px solid #ffffff;
+	transition:all ease 0.3s;
+	-webkit-transition:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+}
+.detalhe-horario{
+	position:absolute;
+	text-align:left;
+	bottom:0px;
+	left:0px;
+	width:50%;
+	height:10%;
+	margin:auto;
+	color:#f7f7f7;
+	font:10pt arial,sans-serif;
+	text-transform:uppercase;
+	font-weight:bold;
+	padding:0px;
+}
+#livre{
+	text-align:center;
+	float:left;
+	width:15%;
+	height:18%;
+	box-sizing: border-box;
+	position:relative;
+	margin:3px;
+}
+#ocupado{
+	text-align:center;
+	float:left;
+	width:15%;
+	height:18%;
+	box-sizing: border-box;
+	position:relative;
+	margin:3px;
+}
+#livre label {
+	
+	cursor: pointer;
+	vertical-align:middle;
+	text-align:center;
+    display: table-cell;
+	line-height:100%;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin:auto;
+	color:#fff;
+	font:bold 12pt Roboto, arial,sans-serif;
+	padding:25% 0px;
+	border-bottom:3px solid rgba(0,255,0,.5);
+}
+#livre input,#ocupado input{
+	opacity:0;
+}
+#livre input:checked + label{
+	background:rgba(0,255,0,.5);
+	border:3px inset rgba(0,255,0,1);
+	color:#ffffff;
+	white-space: nowrap;
+	border-radius:100%;
+}
+#ocupado label {
+	cursor: default;
+	vertical-align:middle;
+	text-align:center;
+    display: table-cell;
+	line-height:100%;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin:auto;
+	font:bold 10pt  Roboto, arial,sans-serif;
+	color:rgba(80,0,0,1);
+	border:3px inset rgba(80,0,0,1);
+	padding:25% 0px;
+}
+.indisponivel{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	margin:auto auto;
+	text-align:center;
+	color:#fff;
+	font:18pt arial,sans-serif;
+}
+.data{
+	position:relative;
+	width:100%;
+	height:15%;
+	margin:auto;
+	text-align:center;
+	color:#ffffff;
+	font:13pt Roboto,arial,sans-serif;
+	
+}
+
+ /*-------------- Calenadrio -------------------*/
+ .calendar{
+	width:100%;
+	height: 100%;
+ }
+ .ui-datepicker {
+    width: 100%;
+	height:100%;
+    margin:auto;
+    font-size: 10pt;
+}
+.ui-datepicker a {
+    text-decoration: none;
+}
+.ui-datepicker table {
+    width: 100%;
+}
+.ui-datepicker-header {
+    color: #fff;
+    font-weight: bold;
+    line-height: 30px;
+	background:#2d2d2d;
+	text-transform:uppercase;
+	font-size:13pt;
+	letter-spacing:2px;
+	font-family:Roboto,sans-serif;
+}
+.ui-datepicker-title {
+    text-align: center;
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url('../imagens/arrow.png');
+    background-repeat: no-repeat;
+    line-height: 600%;
+    overflow: hidden;
+}
+.ui-datepicker-prev {
+    float: left;
+    background-position: center -30px;
+}
+.ui-datepicker-next {
+    float: right;
+    background-position: center 0px;
+}
+.ui-datepicker thead {
+    background-color: #f7f7f7;
+    background-image: -moz-linear-gradient(top,  #f7f7f7 0%, #f1f1f1 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#f1f1f1));
+    background-image: -webkit-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    background-image: -o-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    background-image: -ms-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    background-image: linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f1f1f1',GradientType=0 );
+}
+.ui-datepicker th {
+    text-transform: uppercase;
+    font-size: 10pt;
+	width:10%;
+    color: #232323;
+}
+.ui-datepicker tbody td {
+    padding: 0;
+}
+.ui-datepicker tbody td:last-child {
+    border-right: 0px;
+}
+.ui-datepicker tbody tr {
+    border-bottom: 1px solid #fff;
+}
+.ui-datepicker tbody tr:last-child {
+    border-bottom: 0px;
+}
+.ui-datepicker td a{
+	font:bold 15pt Roboto,arial,sans-serif;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: #696969;
+}
+.ui-datepicker-calendar .ui-state-default {
+    background: -moz-linear-gradient(top,  #ededed 0%, #dedede 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#dedede));
+    background: -webkit-linear-gradient(top,  #ededed 0%,#dedede 100%);
+    background: -o-linear-gradient(top,  #ededed 0%,#dedede 100%);
+    background: -ms-linear-gradient(top,  #ededed 0%,#dedede 100%);
+    background: linear-gradient(top,  #ededed 0%,#dedede 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dedede',GradientType=0 );
+}
+.ui-datepicker-unselectable .ui-state-default {
+    background:rgba(29,29,29,0.5);
+    color:rgba(100,100,100,0.5);
+	border:0px;
+	font-size:8pt;
+}
+.ui-datepicker-calendar .ui-state-hover {
+    background: #f7f7f7;
+}
+.ui-datepicker-calendar .ui-state-active {
+	background:#a6a6a6;
+    color: #fff;
+    text-shadow: 0px 1px 0px #999999;
+    filter: dropshadow(color=#999999, offx=0, offy=1);
+    position: relative;
+}
+.ui-datepicker-calendar td:first-child .ui-state-active {
+    margin-left: 0;
+}
+.ui-datepicker-calendar td:last-child .ui-state-active {
+    margin-right: 0;
+}
+ /*---------------- CAIXA AVISOS ------------*/
+.aviso-sessao{
+	position:fixed;
+	width:40%;
+	height:20%;
+	top:0;left:0;right:0px;
+	margin:auto;
+	border:3px solid #fff;
+	background:#2d2d2d;
+	z-index:99999999;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+	border-top:0px;
+	display:none;
+}
+.aviso-sessao > span{
+	position:absolute;
+	top:0px;bottom:0px;left:0px;right:0px;
+	margin:8% auto auto auto;
+	font:bold 15pt Roboto,arial,sans-serif;
+	text-align:center;
+	color:#fff;
+	text-transform:uppercase;
+}
+
+
+
+
+
+/*--------------PAGER SLIDE-------*/
+#pager,#menu-mobile,.banner-mobile{
+	display:none;
+}
+
+
+
+@media screen and (max-width: 980px){
+	
+/*==========LOGIN=====*/
+div#tabelas{
+	width:90%;
+	height:80%;
+}
+
+/*---------- Login - Cadastro -----------*/
+#cadastrar{
+	display:none;
+}
+.menu-fixo .flip{
+	background-size:90%;
+}
+.flip {
+	background-size:70%;
+}
+.caixa-login{
+	z-index:99;
+	
+}
+.fecha-login{
+	height:7%;
+	width:justify;
+}
+.tabela{
+	margin:5% auto 0% auto;
+	width:90%;
+	float:none;
+}
+.tabela-registro{
+	margin:2% auto;
+	width:80%;
+	float:none;
+}
+.tabela caption,.tabela-registro caption{
+	font-size:16pt;
+}
+.tabela .texto,.tabela-registro .texto{
+	min-height:50px;
+	width:100%;
+	font-size:15pt;
+}
+.tabela-registro th{
+	width:90%;
+}
+.tabela-registro .th-detalhe{
+	width:10%;
+	height:50px;
+}
+
+/*------------------AVISOS CADASTRO----------*/ 
+.tabela-registro .aviso{
+	position:relative;
+	max-height:50px;
+	border:0px;
+	display:none;
+	float:right;
+}
+.tabela-registro .tipo-erro{
+	width:22%;
+}
+
+.tabela-registro .detalhe{
+	height:50px;
+}
+.tabela input.bot,.tabela-registro input.bot{
+	min-height:50px;
+	width:40%;
+	margin:20px;
+	font:bold 15pt Roboto,arial,sans-serif;
+}
+.tabela a.senha {
+	font-size:13pt;
+}
+
+.info-login{
+	font:bold 10pt Roboto,arial,sans-serif;
+	text-align:center;
+}
+
+/*--------------- AVISOS LOGIN-----------*/
+
+#errolog,#ok{
+	width:100%;
+	position:absolute;
+	margin:auto;
+	bottom:0px;
+	left:0px;
+	right:0px;
+}
+#errolog span,#ok span{
+	position:relative;
+	display:block;
+}
+#ok span{
+	background:rgb(0,255,0);
+}
+#errolog img,#ok img{
+	display:none;
+	
+}
+
+/*----------- SLIDE PRINCIPAL---------*/	
+
+body{
+		overflow-x: hidden;
+}
+section#inicio{
+	position:absolute;
+	top:6%;
+	left:0px;
+	margin:0px;
+	padding:0px;
+	height:30%;
+	width:100%;
+	background:#a6a6a6;
+}
+
+div#slideshow-container {
+	width:100%;
+	height:59%;
+	position:absolute;
+	margin:0;
+	top:36%;
+}
+
+#inicia-menu{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+}
+
+#menu{
+	position:fixed;
+	top:0px;
+	left:0px;
+}
+
+#banner {
+	display:none;
+}
+.caixabanner{
+	height:100%;
+	
+}
+
+.banner-mobile{
+	position:absolute;
+	top:0px;left:0px;
+	right:0px;bottom:0px;
+	margin:auto;
+	height:90%;
+	display:block;
+}
+.pager{
+	position:absolute;
+	bottom:0px;left:0px;right:0px;
+	margin:auto;
+	height:5%;
+	width:50%;
+	text-align:center;
+}
+.pager-real{
+	position:relative;
+	margin:0 auto;
+	padding:0px;
+	text-align:center;
+	box-sizing: border-box;
+}
+.pager-real li{
+	display:inline-block;
+	list-style:none;
+	width:10%;
+	height:75%;
+	margin:2.5%;
+	margin-top:1%;
+}
+.pager-real li a{
+	position:relative;
+	border:2px solid #a6a6a6;
+	display:block;
+	width:100%;
+	height:100%;
+	padding:4px;
+	border-radius:100%;
+	-webkit-border-radius:100%;
+	-moz-border-radius:100%;
+	transition:all ease .3s;
+}
+
+.pager-real li.activeSlide a{
+	transition:all ease .3s;
+	background:#a6a6a6;
+}
+
+span#prev,span#next {
+	display:none;
+	
+}
+
+#menu-mobile{
+		width:100%;
+		height:10%;
+		position:fixed;
+		background:#3d3d3d;
+		bottom:0px;
+		left:0%;
+		z-index:98;
+		display:none;
+		padding:0px;
+		margin:0px;		
+}
+#menu-mobile .item-menu-mobile{
+		float:left;
+		position:relative;
+		width:20%;
+		height:100%;
+		margin:0px;
+		display:block;
+		text-align:center;
+}
+.item-menu-mobile img{
+		margin:10% auto auto auto;
+		height:50%;
+		position:relative;
+}
+.item-menu-mobile span{
+		position:absolute;
+		bottom:5px;
+		left:0px;
+		right:0px;
+		margin:1% auto;
+		color:#fff;
+		font:7pt Roboto,arial,sans-serif;
+		text-decoration:none;
+		text-transform:uppercase;
+}
+.item-menu-mobile a{
+		display:block;
+		color:#fff;
+		font:7pt Roboto,arial,sans-serif;
+		text-decoration:none;
+		text-transform:uppercase;
+		position:relative;
+		margin-bottom:3px;
+		width:100%;
+		height:100%;
+}
+#menu-mobile .item-menu-mobile:active{
+	background:#2d2d2d;
+}
+#menu ul,.menu-fixo{
+		display:none;
+}
+	
+div#troca{
+display:none;
+}
+
+/*======LOGIN======*/
+.menu-fixo .flip{
+	background-size:80%;
+}
+
+
+/*--------SOBRE--------*/
+section#sobre{
+	position:absolute;
+	width:100%;
+	height:98%;
+	top:400%;
+	background:#2d2d2d;
+	left:0%;
+}
+.sobre{
+	position:absolute;
+	top:6%;
+	left:0px;
+	right:0px;
+	margin:auto;
+	width:80%;
+	height:54%;
+	border-bottom:0px;
+}
+.img-sobre{
+	position:absolute;
+	top:60%;
+	left:0px;
+	right:0px;
+	margin:auto;
+	width:80%;
+	height:35%;
+}
+h1.titulo-sobre{
+	font-size:16pt;
+}
+p.texto-sobre{
+	font:1.4em Roboto,arial,sans-serif;
+	line-height:1.6em;
+}
+.sobre-imagem{
+	position:relative;
+	margin:0px auto;
+}
+
+
+/* Agendamentos */
+section#agenda{
+	background:none;
+	background-color:#dedede;
+	
+}
+div#agendamentos{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+.tabela-agenda{
+	position:absolute;
+	width:80%;
+	height:45%;
+	text-align:center;
+	top:5%;
+	margin:1% 10%;
+	background:rgba(0,0,0,.8);
+	box-shadow:3px 5px 5px rgba(0,0,0,0.5);
+}
+.horarios-disponiveis{
+	position:absolute;
+	width:80%;
+	height:40%;
+	text-align:center;
+	bottom:4%;
+	margin:1% 10%;
+	background:rgba(0,0,0,.8);
+	box-shadow:3px 5px 5px rgba(0,0,0,0.5);
+}
+.tabela-agenda > div{
+	margin:1% auto;
+	font-size:15pt;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#fff;
+	letter-spacing:2px;
+	text-align:center;
+}
+.data{
+	position:relative;
+	width:100%;
+	height:10%;
+	margin:auto;
+	text-align:center;
+	color:#ffffff;
+	font:13pt Roboto,arial,sans-serif;
+}
+.horarios-disponiveis .span-horario{
+	width:100%;
+	height:5%;
+	margin:1% auto;
+	font-size:15pt;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#fff;
+	letter-spacing:2px;
+	text-align:center;
+}
+.horarios-disponiveis .lista-horario{
+	position:absolute;
+	width:100%;
+	height:80%;
+}
+.horarios-disponiveis .bot-verifica{
+	position:absolute;
+	text-align:left;
+	bottom:0px;
+	width:50%;
+	height:10%;
+	margin:1% auto auto 0;
+	
+}
+.horarios-disponiveis .bot-agenda{
+	font:bold 10pt Roboto,arial,sans-serif;
+	letter-spacing:1px;
+}
+
+.detalhe-horario{
+	position:absolute;
+	text-align:left;
+	bottom:0px;
+	left:0px;
+	width:50%;
+	height:10%;
+	margin:auto;
+	font:bold 10pt arial,sans-serif;
+	text-transform:uppercase;
+	padding:5px;
+}
+#livre,#ocupado{
+	text-align:center;
+	float:left;
+	width:14%;
+	height:21%;
+	box-sizing: border-box;
+	position:relative;
+	margin:3px;
+	margin-left:2%;
+}
+
+/* RODAPÉ */
+footer#rodape{
+	top:498%;
+	width:100%;
+	height:100%;
+}
+/*--------------- Redes Sociais -------------------*/
+.redes-sociais{
+width:80%;
+margin:0 auto;
+height:30%;
+float:none;
+text-align:center;
+position:relative;
+}
+.areas{
+	position:relative;
+	width:100%;
+	height:100%;
+	margin:auto;
+	text-align:center;
+	border:1px solid transparent;
+}
+.tabela-info{
+	margin-top:7%;
+	text-align:center;
+	text-indent:0%;
+}
+.tabela-info img{
+	height:auto;
+	width:auto;
+}
+.tabela-info .fotos-redes{
+	font-size:18pt;
+}
+
+.tabela-info .endereco{
+	font-size:15pt;
+}
+.tabela-info .endereco2{
+	font-size:13pt;
+}
+#gmap_canvas
+{
+	position:relative;
+	margin:0px auto;
+	height:100%;
+	max-width:80%;
+    border: 1px solid #ccc;
+}
+.empresa{
+	height:10%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+.nome-empresa{
+	width:100%;
+	height:20%;
+	font:bold 13pt Roboto,sans-serif;
+	margin:auto;
+	position:relative;
+}
+.design{
+	margin:auto;
+	position:relative;
+	height:20%;
+	width:100%;
+	margin-top:5%;
+}
+.design span{
+	font:bold 11pt Roboto,sans-serif;
+}
+ .caixa{
+	position:fixed;
+	width:100%;
+	height:100%;
+	bottom:0px;
+	left:0px;
+	margin:auto;
+	padding:0px;
+	background:rgba(0,0,0,.8);
+	z-index:97;
+	display: none;
+}
+.popup{
+     position: absolute;
+     top: 0; bottom: 0;
+     left: 0; right: 0;
+     margin: auto;
+     width: 80%;
+     height: 90%;
+     padding: 20px;
+     border:3px solid #a6a6a6;
+	 border-radius:10px;
+     background:#1C1C1C;
+	 z-index:99;
+  }
+/*========= GALERIA ===========*/
+
+.item{	
+	background: none;
+	background-color:#0d0d0d;
+}
+.item img{
+	max-width:80%;
+}
+
+span.prev-galeria,span.next-galeria{
+	background-size:auto;
+	opacity:1;
+}
+span#ant,span#prox{
+	width:8%;
+}
+#toTop {
+	right: 5px; 
+	bottom:0.1%;
+	margin:auto;
+	opacity:1;
+	width:6%;
+	height:3%;
+	background-color:#000;
+}
+}
+
+@media screen and (max-width: 800px){
+	
+.pager-real li{
+	width:12%;
+}
+}
+
+
+@media screen and (max-width: 768px){
+/*-------------------- SOBRE -----------------------*/
+h1.titulo-sobre{
+	font-size:16pt;
+}
+p.texto-sobre{
+	font:1.4em Roboto,arial,sans-serif;
+	line-height:1.6em;
+}
+.sobre-imagem{
+	position:relative;
+	margin:0px auto;
+}
+/*--------------- Redes Sociais -------------------*/
+
+.tabela-info img{
+	max-height:50px;
+	width:auto;
+}
+.tabela-info .fotos-redes{
+	font-size:15pt;
+}
+
+.tabela-info .endereco{
+	font-size:13pt;
+}
+.tabela-info .endereco2{
+	font-size:11pt;
+}
+/*======== SPAN SLIDE===========*/
+.pager-real li{
+	width:10%;
+}
+}
+
+
+
+@media (max-width: 360px){
+
+
+/*---------- Login - Cadastro -----------*/
+.fecha-login{
+	height:7%;
+	width:justify;
+}
+.tabela{
+	margin:5% auto 0% auto;
+	width:90%;
+	float:none;
+}
+.tabela-registro{
+	margin:2% auto;
+	width:80%;
+	float:none;
+}
+.tabela caption,.tabela-registro caption{
+	font-size:10pt;
+}
+.tabela .texto,.tabela-registro .texto{
+	min-height:20px;
+	font-size:10pt;
+}
+.tabela-registro th{
+	width:90%;
+}
+.tabela-registro .th-detalhe{
+	width:10%;
+	height:20px;
+}
+.tabela input.bot,.tabela-registro input.bot{
+	min-height:30px;
+	width:30%;
+	margin:5px;
+	font:bold 10pt Roboto,arial,sans-serif;
+}
+.tabela a.senha {
+	font-size:8pt;
+}
+/*------------------AVISOS CADASTRO----------*/ 
+.tabela-registro .aviso{
+	position:relative;
+	max-height:20px;
+	border:0px;
+	display:none;
+	float:right;
+}
+.tabela-registro .tipo-erro{
+	width:25%;
+	font-size:9pt;
+}
+
+.tabela-registro .detalhe{
+	height:20px;
+	
+}
+.info-login{
+	font:bold 9pt Roboto,arial,sans-serif;
+	text-align:center;
+}
+
+/*--------------- AVISOS LOGIN-----------*/
+
+#errolog,#ok{
+	width:100%;
+	position:absolute;
+	margin:auto;
+	bottom:0px;
+	left:0px;
+	right:0px;
+}
+#errolog span,#ok span{
+	position:relative;
+	display:block;
+	font-size:9pt;
+	padding:0px;
+}
+#ok span{
+	background:rgb(0,255,0);
+}
+#errolog img,#ok img{
+	display:none;
+	
+}
+
+.pager-real li{
+	width:13%;
+}
+
+.item-menu-mobile span{
+	font:6pt Roboto,arial,sans-serif;
+}
+
+h1.titulo-sobre{
+	font-size:16pt;
+}
+p.texto-sobre{
+	font:0.9em Roboto,arial,sans-serif;
+}
+
+
+/* Agendamentos */
+.tabela-agenda > div{
+	font:bold 9pt Roboto,sans-serif;
+}
+.data{
+	font:9pt Roboto,arial,sans-serif;
+}
+.horarios-disponiveis .testa{
+	width:60%;
+	font: bold 10pt arial,sans-serif;
+	text-align:center;
+	text-indent:0px;
+}
+.horarios-disponiveis .span-horario{
+	font-size:8pt;
+}
+
+.horarios-disponiveis .bot-agenda{
+	font:bold 6pt Roboto,arial,sans-serif;
+}
+
+.detalhe-horario{
+	font:bold 6pt arial,sans-serif;
+}
+#livre,#ocupado{
+	text-align:center;
+	float:left;
+	width:42px;
+	height:42px;
+	box-sizing: border-box;
+	position:relative;
+	margin:1% 1%;
+}
+#livre label{
+	font-size:8pt;
+}
+/* RODAPÉ */
+footer#rodape{
+	top:498%;
+	width:100%;
+	height:120%;
+}
+/*--------------- Redes Sociais -------------------*/
+.redes-sociais{
+width:80%;
+margin:0 auto;
+height:30%;
+float:none;
+text-align:center;
+position:relative;
+}
+.areas{
+	position:relative;
+	width:100%;
+	height:100%;
+	margin:auto;
+	text-align:center;
+	border:1px solid transparent;
+}
+.tabela-info{
+	margin-top:7%;
+	text-align:center;
+	text-indent:0%;
+}
+.tabela-info img{
+	height:25px;
+	width:auto;
+}
+.tabela-info .fotos-redes{
+	font-size:9pt;
+}
+
+.tabela-info .endereco{
+	font-size:10pt;
+}
+.tabela-info .endereco2{
+	font-size:8pt;
+}
+#gmap_canvas
+{
+	position:relative;
+	margin:0px auto;
+	height:100%;
+	max-width:100%;
+    border: 1px solid #ccc;
+}
+.empresa{
+	height:10%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+.nome-empresa{
+	width:100%;
+	height:20%;
+	font:bold 8pt Roboto,sans-serif;
+	margin:auto;
+	position:relative;
+}
+.design{
+	margin:auto;
+	position:relative;
+	height:20%;
+	width:100%;
+	margin-top:5%;
+}
+.design span{
+	font:bold 7pt Roboto,sans-serif;
+}
+ .caixa{
+	position:fixed;
+	width:100%;
+	height:100%;
+	bottom:0px;
+	left:0px;
+	margin:auto;
+	padding:0px;
+	background:rgba(0,0,0,.8);
+	z-index:97;
+	display: none;
+}
+.popup{
+     position: absolute;
+     top: 0; bottom: 0;
+     left: 0; right: 0;
+     margin: auto;
+     width: 80%;
+     height: 90%;
+     padding: 20px;
+     border:3px solid #a6a6a6;
+	 border-radius:10px;
+     background:#1C1C1C;
+	 z-index:99;
+  }
+  
+/*========= GALERIA ===========*/
+span.prev-galeria,span.next-galeria{
+	background-size:10%;
+}
+span#ant,span#prox{
+	width:10%;
+}
+
+/*-------------- Calenadrio -------------------*/
+.ui-datepicker {
+    font-size: 8pt;
+}
+
+.ui-datepicker-header {
+	font-size:9pt;	
+}
+.ui-datepicker th {
+    font-size: 6pt;
+}
+.ui-datepicker td a{
+	font:bold 8pt Roboto,arial,sans-serif;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+    height: 30px;
+    line-height: 30px;
+}
+.ui-datepicker-unselectable .ui-state-default {
+	font-size:8pt;
+}
+table#cortes-valores{
+	width:90%;
+}
+
+table#cortes-valores caption{
+	font-size:12pt;
+}
+table#cortes-valores .esquerda{
+	font:bold 7pt Roboto,arial,sans-serif;
+}
+table#cortes-valores .direita{
+	font:bold 8pt Roboto,arial,sans-serif;
+}
+/*============LGOGIN========*/
+div#tabelas{
+	width:90%;
+	height:90%;
+}
+.tabela,.tabela-registro{
+	width:90%;
+	margin:2% 0px;
+	float:none;
+}
+}
+
+
+
+@media (max-width: 320px){
+
+
+/*---------- Login - Cadastro -----------*/
+.fecha-login{
+	height:7%;
+	width:justify;
+}
+.tabela{
+	margin:5% auto 0% auto;
+	width:90%;
+	float:none;
+}
+.tabela-registro{
+	margin:2% auto;
+	width:80%;
+	float:none;
+}
+.tabela caption,.tabela-registro caption{
+	font-size:10pt;
+}
+.tabela .texto,.tabela-registro .texto{
+	min-height:20px;
+	font-size:10pt;
+}
+.tabela-registro th{
+	width:90%;
+}
+.tabela-registro .th-detalhe{
+	width:10%;
+	height:20px;
+}
+.tabela input.bot,.tabela-registro input.bot{
+	min-height:30px;
+	width:30%;
+	margin:5px;
+	font:bold 10pt Roboto,arial,sans-serif;
+}
+.tabela a.senha {
+	font-size:8pt;
+}
+/*------------------AVISOS CADASTRO----------*/ 
+.tabela-registro .aviso{
+	position:relative;
+	max-height:20px;
+	border:0px;
+	display:none;
+	float:right;
+}
+.tabela-registro .tipo-erro{
+	width:25%;
+	font-size:9pt;
+}
+
+.tabela-registro .detalhe{
+	height:20px;
+	
+}
+.info-login{
+	font:bold 9pt Roboto,arial,sans-serif;
+	text-align:center;
+}
+
+/*--------------- AVISOS LOGIN-----------*/
+
+#errolog,#ok{
+	width:100%;
+	position:absolute;
+	margin:auto;
+	bottom:0px;
+	left:0px;
+	right:0px;
+}
+#errolog span,#ok span{
+	position:relative;
+	display:block;
+	font-size:9pt;
+	padding:0px;
+}
+#ok span{
+	background:rgb(0,255,0);
+}
+#errolog img,#ok img{
+	display:none;
+	
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    height: 22px;
+    line-height: 22px;
+}
+h1.titulo-sobre{
+	font-size:10pt;
+}
+p.texto-sobre{
+	font:0.7em Roboto,arial,sans-serif;
+}
+
+
+/* Agendamentos */
+.tabela-agenda > div{
+	font:bold 10pt Roboto,sans-serif;
+}
+.data{
+	font:9pt Roboto,arial,sans-serif;
+}
+.horarios-disponiveis .span-horario{
+	font-size:10pt;
+	
+}
+.horarios-disponiveis .testa{
+	width:60%;
+	font: bold 8pt arial,sans-serif;
+	text-align:center;
+	text-indent:0px;
+	letter-spacing:1px;
+}
+.horarios-disponiveis .bot-agenda{
+	font:bold 5pt Roboto,arial,sans-serif;
+	letter-spacing:1px;
+	padding:0px;
+}
+
+.detalhe-horario{
+	font:bold 6pt arial,sans-serif;
+	padding:0px 2px;
+}
+#livre,#ocupado{
+	text-align:center;
+	float:left;
+	width:31px;
+	height:31px;
+	box-sizing: border-box;
+	position:relative;
+	margin:1px 5.2px;
+	
+}
+#livre input:checked + label{
+	border:1px inset rgba(0,255,0,1);
+}
+#livre label{
+	font-size:6pt;
+	border-bottom:1px solid rgba(0,255,0,.5);
+}
+
+/*=====CALENDÁRIO======*/
+
+
+
+
+/* RODAPÉ */
+footer#rodape{
+	top:498%;
+	width:100%;
+	height:170%;
+}
+/*========= GALERIA ===========*/
+.item img{
+	max-width:80%;
+}
+
+
+span#ant,span#prox{
+	width:10%;
+}
+
+}
